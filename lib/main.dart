@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/screens/icon_viewer_screen.dart';
-import 'package:flutter_icons/widgets/icon_viewer.dart';
-import 'package:flutter_icons/widgets/theme_button.dart';
 import 'package:flutter_icons/widgets/theme_provider.dart';
 import 'package:provider/provider.dart';
 
