@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/widgets/icon_viewer.dart';
 import 'package:flutter_icons/widgets/theme_button.dart';
 
-
 class IconViewerScreen extends StatelessWidget {
   final String title;
   const IconViewerScreen({super.key, required this.title});
@@ -28,18 +27,24 @@ class IconViewerScreen extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
+            DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Theme.of(context).colorScheme.inversePrimary,
               ),
-              child: Text('Drawer Header'),
+              child: const Text('Flutter Icons'),
             ),
             ListTile(
               title: const Text('Material Icons'),
               onTap: () {
                 Navigator.pop(context);
               },
-            )
+            ),
+            ListTile(
+              title: const Text('Font Awesome Icons'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
           ],
         ),
       ),
