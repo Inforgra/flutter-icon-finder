@@ -10,7 +10,7 @@ class IconList extends StatelessWidget {
   int getCrossAxisAlignment(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     if (width < 640) {
-      return 2;
+      return 4;
     } else if (width < 768) {
       return 4;
     } else if (width < 1024) {
@@ -50,9 +50,11 @@ class IconList extends StatelessWidget {
                                     children: [
                                       IconButton(
                                         onPressed: () {
-                                          Clipboard.setData(ClipboardData(text: 'Icon(Icons.${icon.key})'));
+                                          Clipboard.setData(ClipboardData(
+                                              text: 'Icon(Icons.${icon.key})'));
                                           ScaffoldMessenger.of(context)
-                                              .showSnackBar(const SnackBar(content: Text('Copied')));
+                                              .showSnackBar(const SnackBar(
+                                                  content: Text('Copied')));
                                         },
                                         icon: const Icon(Icons.content_copy),
                                       ),
@@ -61,7 +63,10 @@ class IconList extends StatelessWidget {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      SizedBox(height: 100.0, child: FittedBox(child: Icon(icon.value))),
+                                      SizedBox(
+                                          height: 100.0,
+                                          child: FittedBox(
+                                              child: Icon(icon.value))),
                                     ],
                                   ),
                                   const SizedBox(height: 16.0),
