@@ -1,3 +1,1 @@
-# Flutter Icons
-
-A new Flutter project.
+# Flutter Icon Finder
