@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/widgets/icon_viewer.dart';
 import 'package:flutter_icons/widgets/theme_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class IconViewerScreen extends StatelessWidget {
-  final String title;
-  const IconViewerScreen({super.key, required this.title});
+  final String applicationName = 'IconSearch';
+  final String applicationVersion = '0.1.0';
+  const IconViewerScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(applicationName),
         leading: Builder(builder: (context) {
           return IconButton(
             icon: const Icon(Icons.list),
@@ -31,18 +33,35 @@ class IconViewerScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.inversePrimary,
               ),
-              child: const Text('Flutter Icons'),
+              child: Text(applicationName),
             ),
             ListTile(
+              leading: const Icon(Icons.article),
               title: const Text('Material Icons'),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: const Text('Font Awesome Icons'),
+              leading: const Icon(Icons.question_mark),
+              title: const Text('About'),
               onTap: () {
                 Navigator.pop(context);
+                showAboutDialog(
+                  context: context,
+                  applicationName: applicationName,
+                  applicationVersion: applicationVersion,
+                  applicationIcon: Image.asset(
+                    'assets/image/logo.png',
+                    width: 60,
+                  ),
+                  children: [
+                    InkWell(
+                      child: const Text('https://inforgra.com/ja/IconSearch'),
+                      onTap: () => launchUrl(Uri(scheme: 'https', host: 'inforgra.com', path: 'ja/IconSearch')),
+                    ),
+                  ],
+                );
               },
             ),
           ],

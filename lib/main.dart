@@ -15,7 +15,6 @@ void main() {
 }
 
 class MainApp extends StatelessWidget {
-  static const appTitle = 'Flutter Icons';
   const MainApp({super.key});
   @override
   Widget build(BuildContext context) {
@@ -31,7 +30,7 @@ class MainApp extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.dark,
       ),
-      home: const IconViewerScreen(title: appTitle),
+      home: const IconViewerScreen(),
     );
   }
 }
