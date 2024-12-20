@@ -24,7 +24,7 @@ flutter:
   - assets/image/logo.png
 
 msix_config:
-  display_name: Flutter Icons
+  display_name: IconSearch
   publisher_display_name: Inforgra
-  identity_name: icons.flutter.inforgra.com
+  identity_name: icon_search.ja.inforgra.com
   msix_version: 1.0.0.0
