@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/contants/material_icons.dart';
-import 'package:flutter_icons/contants/material_icons_outlined.dart';
-import 'package:flutter_icons/contants/material_icons_rounded.dart';
-import 'package:flutter_icons/contants/material_icons_sharp.dart';
-import 'package:flutter_icons/widgets/icon_list.dart';
+import 'package:icon_search/contants/material_icons.dart';
+import 'package:icon_search/contants/material_icons_outlined.dart';
+import 'package:icon_search/contants/material_icons_rounded.dart';
+import 'package:icon_search/contants/material_icons_sharp.dart';
+import 'package:icon_search/widgets/icon_list.dart';
 
 class IconViewer extends StatefulWidget {
   const IconViewer({super.key});

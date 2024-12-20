@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/widgets/icon_viewer.dart';
-import 'package:flutter_icons/widgets/theme_button.dart';
+import 'package:icon_search/widgets/icon_viewer.dart';
+import 'package:icon_search/widgets/theme_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class IconViewerScreen extends StatelessWidget {
